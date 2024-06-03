@@ -1,12 +1,12 @@
-# Tu Pokedéx con Vue 3 + TypeScript
+# Tu Pokédex con Vue 3 + TypeScript
 
-Manten tus pokémon favoritos siempre contigo!
+¡Mantén tus pokémon favoritos siempre contigo!
 
 ### Características del proyecto
 
-Para el desarrollo de esta aplicación se utilizaron un conjunto de herramientas modernas implementadas bajo un modelo de **arquitectura hexagonal**. De esta forma, obtenemos un código más escalable, desacoplado, reutilizable y testeable!
+Para el desarrollo de esta aplicación se utilizó un conjunto de herramientas modernas implementadas bajo un modelo de **arquitectura hexagonal**. De esta forma, obtenemos un código más escalable, desacoplado, reutilizable y testeable.
 
-Probalo en vivo ➡️ [DEMO](https://vue3-ts-pokedex.netlify.app/)
+Pruébalo en vivo ➡️ [DEMO](https://vue3-ts-pokedex.netlify.app/)
 
 ### Tecnologías
 
@@ -16,17 +16,9 @@ Probalo en vivo ➡️ [DEMO](https://vue3-ts-pokedex.netlify.app/)
 
 ### Desarrollo
 
-Para comenzar el modo de desarrollo sobre el repositorio debemos ejecutar el suguiente comdando.
+Para comenzar el modo de desarrollo sobre el repositorio debemos ejecutar el siguiente comando:
 
 ```bash
 npm install
 npm run dev
-```
-
-### Testing
-
-El proyecto implementa Vitest para correr test unitarios.
-
-```bash
-npm run test
 ```
