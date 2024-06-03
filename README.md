@@ -6,7 +6,7 @@ Manten tus pokémon favoritos siempre contigo!
 
 Para el desarrollo de esta aplicación se utilizaron un conjunto de herramientas modernas implementadas bajo un modelo de **arquitectura hexagonal**. De esta forma, obtenemos un código más escalable, desacoplado, reutilizable y testeable!
 
-Probalo en vivo ➡️ [DEMO](https://lucasrdz994.github.io/vue3-ts-pokedex/)
+Probalo en vivo ➡️ [DEMO](https://vue3-ts-pokedex.netlify.app/)
 
 ### Tecnologías
 
