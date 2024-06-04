@@ -60,11 +60,11 @@ export async function getPokemon(pokemonRepository: PokemonRepository, name: str
   return pokemon
 }
 
-export async function addPokemonToFavs(pokemonRepository: PokemonRepository, name: string): Promise<void> {
+export function addPokemonToFavs(pokemonRepository: PokemonRepository, name: string): void {
   return pokemonRepository.addToFavs(name.toLowerCase())
 }
 
-export async function removePokemonFromFavs(pokemonRepository: PokemonRepository, name: string): Promise<void> {
+export function removePokemonFromFavs(pokemonRepository: PokemonRepository, name: string): void {
   return pokemonRepository.removeFromFavs(name.toLowerCase())
 }
 
