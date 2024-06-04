@@ -1,7 +1,8 @@
 import axios from 'axios'
 
 import { PokemonRepository } from '../domain/PokemonRepository'
-import { getPokemonAdapter, searchPokemonAdapter } from '../adapters/pokemonAdapters'
+import { getPokemonAdapter, searchPokemonAdapter, sharePokemonAdapter } from '../adapters/pokemonAdapters'
+import { Pokemon } from '../domain/Pokemon'
 
 const apiUrl = 'https://pokeapi.co/api/v2'
 
@@ -12,7 +13,8 @@ export function createApiPokemonRepository(): PokemonRepository {
     search,
     getFavs,
     addToFavs,
-    removeFromFavs
+    removeFromFavs,
+    share
   }
 }
 
@@ -68,4 +70,9 @@ function removeFromFavs(name: string) {
   pokemon = pokemon.filter((el) => el !== name)
 
   localStorage.setItem('pokemon-favs', JSON.stringify(pokemon))
+}
+
+async function share(pokemon: Pokemon) {
+  const response = sharePokemonAdapter(pokemon)
+  await navigator.clipboard.writeText(Object.values(response).join(','))
 }

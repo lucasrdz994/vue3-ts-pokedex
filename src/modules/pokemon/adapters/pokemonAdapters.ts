@@ -19,3 +19,12 @@ export function getPokemonAdapter(body: any): Pokemon {
     image: body.sprites?.other['official-artwork']['front_default']
   }
 }
+
+export function sharePokemonAdapter(pokemon: Pokemon): Partial<Pokemon> {
+  return {
+    name: pokemon.name,
+    weight: pokemon.weight,
+    height: pokemon.height,
+    types: pokemon.types
+  }
+}

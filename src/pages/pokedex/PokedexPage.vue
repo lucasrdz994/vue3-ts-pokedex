@@ -8,7 +8,8 @@ import {
   removePokemonFromFavs,
   searchPokemon,
   getFavsPokemon,
-  getPokemon
+  getPokemon,
+  sharePokemon
 } from '@/modules/pokemon/use-cases/pokemonUseCase'
 
 // Components
@@ -84,6 +85,10 @@ function handleOnClosePokemonModal() {
   currentPokemon.value = null
 }
 
+async function handleOnSharePokemon(pokemon: Pokemon) {
+  await sharePokemon(repository, pokemon)
+}
+
 onMounted(async () => {
   try {
     pokemonList.value = await getAllPokemon(repository)
@@ -104,6 +109,7 @@ onMounted(async () => {
     <ListItemModal
       :item="currentPokemon"
       @close="handleOnClosePokemonModal"
+      @copy="handleOnSharePokemon"
       @add-to-favs="handleAddToFavs"
       @remove-from-favs="handleRemoveFromFavs"
     />

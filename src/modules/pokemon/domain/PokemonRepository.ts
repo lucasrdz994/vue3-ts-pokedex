@@ -7,4 +7,5 @@ export interface PokemonRepository {
   getFavs: () => PokemonFavs
   addToFavs: (name: string) => void
   removeFromFavs: (name: string) => void
+  share: (pokemon: Pokemon) => Promise<void>
 }

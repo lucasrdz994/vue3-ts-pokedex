@@ -67,3 +67,7 @@ export async function addPokemonToFavs(pokemonRepository: PokemonRepository, nam
 export async function removePokemonFromFavs(pokemonRepository: PokemonRepository, name: string): Promise<void> {
   return pokemonRepository.removeFromFavs(name.toLowerCase())
 }
+
+export async function sharePokemon(pokemonRepository: PokemonRepository, pokemon: Pokemon): Promise<void> {
+  return pokemonRepository.share(pokemon)
+}
